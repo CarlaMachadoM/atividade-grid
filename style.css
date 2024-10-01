@@ -79,10 +79,15 @@ nav ul li a {
     padding: 10px 20px;
     border-radius: 20px;
     margin-left: 10px;
+    transition: 1s;
 }
 
 .menu li a:hover {
-    background-color: #6a6969;
+    background: linear-gradient(to right, #08b360 0%, #f0a96e 70%, #ffefc1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+    font-size: 20px;
 }
 
 .container {
@@ -118,27 +123,12 @@ nav ul li a {
 
 .footer {
     background-color: #6a6969;
-    border-radius: 20px;
-    text-align: center;
     padding: 30px;
+    height: 20px;
 }
 
 .footer h3 {
     margin-bottom: 15px;
+    text-align: center;
 }
 
-.footer p {
-    margin-bottom: 15px;
-}
-
-.footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.footer .social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
