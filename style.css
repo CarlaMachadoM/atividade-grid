@@ -42,6 +42,48 @@ h3 {
     text-align: justify;
 }
 
+h4 {
+    font-family: monospace;
+    margin-left: -400px;
+    color: #f0a96e;
+    font-size: 40px;
+    position: relative;
+    font-weight: bold;
+    z-index: 1; /* O texto fica acima do gradiente */
+    transition: opacity 1s; /* Transição aplicada ao h4 */
+}
+
+h4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #08b360a4 0%, #f0a96e 70%, #ffefc1 100%);
+    z-index: -1; /* O gradiente fica atrás do texto */
+    transition: opacity 1s;
+}
+
+h4:hover {
+    opacity: 0; /* Texto some no hover */
+    transition: opacity 1s; /* Transição suave */
+}
+
+h4:hover::before {
+    opacity: 0;
+    transition: opacity 1s;
+    color: #08b36000;
+}
+
+
+h4:hover::before {
+    opacity: 0;
+    transition: opacity 1s;
+    color: #08b36000;
+}
+
+
 .logo {
     width: 45px;
     height: 45px;
@@ -114,8 +156,8 @@ nav ul li a {
 }
 
 .images img {
-    width: 300px; /* Defina uma largura fixa */
-    height: 200px; /* Defina uma altura fixa */
+    width: 500px; /* Defina uma largura fixa */
+    height: 400px; /* Defina uma altura fixa */
     object-fit: cover; /* Garante que a imagem se ajuste corretamente ao container */
     border-radius: 10px;
 }
